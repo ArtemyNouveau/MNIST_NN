@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-
 <title>MNIST_NN</title>
 
 <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=2JuNTHYs188zOvKfZ_MSNUQ_zAq16fLrOGoWkNs6DuPa6FC3jSZX7dVgAqF5NVoi6TDP38g_LMZEs5_S73wagOUU8mwzsHNbdqGf6Qf-pOxyIoZAJJUSyzHpEFCTohIS" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -9129,15 +9128,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -12519,7 +12518,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -13033,14 +13032,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -13350,11 +13349,11 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_cv</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_cv</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df_features</span><span class="p">,</span> <span class="n">df_label</span><span class="p">,</span> 
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_cv</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_cv</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">df_features</span><span class="p">,</span> <span class="n">df_label</span><span class="p">,</span>
                                                 <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
                                                 <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1212</span><span class="p">)</span>
 
-<span class="n">X_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asmatrix</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">33600</span><span class="p">,</span> <span class="mi">784</span><span class="p">)</span> 
+<span class="n">X_train</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asmatrix</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">33600</span><span class="p">,</span> <span class="mi">784</span><span class="p">)</span>
 <span class="n">X_cv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asmatrix</span><span class="p">(</span><span class="n">X_cv</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">8400</span><span class="p">,</span> <span class="mi">784</span><span class="p">)</span>
 <span class="n">X_test</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asmatrix</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">28000</span><span class="p">,</span> <span class="mi">784</span><span class="p">)</span>
 </pre></div>
@@ -13518,19 +13517,19 @@ div#notebook {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Model: &#34;model_10&#34;
 _________________________________________________________________
-Layer (type)                 Output Shape              Param #   
+Layer (type)                 Output Shape              Param #
 =================================================================
-input_10 (InputLayer)        (None, 784)               0         
+input_10 (InputLayer)        (None, 784)               0
 _________________________________________________________________
-Hidden_Layer_1 (Dense)       (None, 300)               235500    
+Hidden_Layer_1 (Dense)       (None, 300)               235500
 _________________________________________________________________
-Hidden_Layer_2 (Dense)       (None, 100)               30100     
+Hidden_Layer_2 (Dense)       (None, 100)               30100
 _________________________________________________________________
-Hidden_Layer_3 (Dense)       (None, 100)               10100     
+Hidden_Layer_3 (Dense)       (None, 100)               10100
 _________________________________________________________________
-Hidden_Layer_4 (Dense)       (None, 200)               20200     
+Hidden_Layer_4 (Dense)       (None, 200)               20200
 _________________________________________________________________
-Output_Layer (Dense)         (None, 10)                2010      
+Output_Layer (Dense)         (None, 10)                2010
 =================================================================
 Total params: 297,910
 Trainable params: 297,910
@@ -14043,21 +14042,21 @@ Epoch 20/20
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Model: &#34;model_14&#34;
 _________________________________________________________________
-Layer (type)                 Output Shape              Param #   
+Layer (type)                 Output Shape              Param #
 =================================================================
-input_14 (InputLayer)        (None, 784)               0         
+input_14 (InputLayer)        (None, 784)               0
 _________________________________________________________________
-Hidden_Layer_1 (Dense)       (None, 300)               235500    
+Hidden_Layer_1 (Dense)       (None, 300)               235500
 _________________________________________________________________
-Hidden_Layer_2 (Dense)       (None, 100)               30100     
+Hidden_Layer_2 (Dense)       (None, 100)               30100
 _________________________________________________________________
-Hidden_Layer_3 (Dense)       (None, 100)               10100     
+Hidden_Layer_3 (Dense)       (None, 100)               10100
 _________________________________________________________________
-Hidden_Layer_4 (Dense)       (None, 100)               10100     
+Hidden_Layer_4 (Dense)       (None, 100)               10100
 _________________________________________________________________
-Hidden_Layer_5 (Dense)       (None, 200)               20200     
+Hidden_Layer_5 (Dense)       (None, 200)               20200
 _________________________________________________________________
-Output_Layer (Dense)         (None, 10)                2010      
+Output_Layer (Dense)         (None, 10)                2010
 =================================================================
 Total params: 308,010
 Trainable params: 308,010
@@ -14228,31 +14227,31 @@ Epoch 20/20
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Model: &#34;model_15&#34;
 _________________________________________________________________
-Layer (type)                 Output Shape              Param #   
+Layer (type)                 Output Shape              Param #
 =================================================================
-input_15 (InputLayer)        (None, 784)               0         
+input_15 (InputLayer)        (None, 784)               0
 _________________________________________________________________
-Hidden_Layer_1 (Dense)       (None, 300)               235500    
+Hidden_Layer_1 (Dense)       (None, 300)               235500
 _________________________________________________________________
-dropout_6 (Dropout)          (None, 300)               0         
+dropout_6 (Dropout)          (None, 300)               0
 _________________________________________________________________
-Hidden_Layer_2 (Dense)       (None, 100)               30100     
+Hidden_Layer_2 (Dense)       (None, 100)               30100
 _________________________________________________________________
-dropout_7 (Dropout)          (None, 100)               0         
+dropout_7 (Dropout)          (None, 100)               0
 _________________________________________________________________
-Hidden_Layer_3 (Dense)       (None, 100)               10100     
+Hidden_Layer_3 (Dense)       (None, 100)               10100
 _________________________________________________________________
-dropout_8 (Dropout)          (None, 100)               0         
+dropout_8 (Dropout)          (None, 100)               0
 _________________________________________________________________
-Hidden_Layer_4 (Dense)       (None, 100)               10100     
+Hidden_Layer_4 (Dense)       (None, 100)               10100
 _________________________________________________________________
-dropout_9 (Dropout)          (None, 100)               0         
+dropout_9 (Dropout)          (None, 100)               0
 _________________________________________________________________
-Hidden_Layer_5 (Dense)       (None, 200)               20200     
+Hidden_Layer_5 (Dense)       (None, 200)               20200
 _________________________________________________________________
-dropout_10 (Dropout)         (None, 200)               0         
+dropout_10 (Dropout)         (None, 200)               0
 _________________________________________________________________
-Output_Layer (Dense)         (None, 10)                2010      
+Output_Layer (Dense)         (None, 10)                2010
 =================================================================
 Total params: 308,010
 Trainable params: 308,010
@@ -14476,7 +14475,7 @@ Epoch 20/20
   </div>
 </body>
 
- 
+
 
 
 </html>
